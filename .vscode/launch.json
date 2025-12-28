@@ -1,0 +1,41 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Program",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/shaderpaly_debug",
+            "cwd": "${workspaceFolder}",
+            "type": "gdb",
+            "arguments": "shaders/circles.frag",
+            "preLaunchTask": "Build Program"
+        },
+        {
+            "name": "Debug Build",
+            "request": "launch",
+            "program": "${workspaceFolder}/a.out",
+            "cwd": "${workspaceFolder}",
+            "type": "gdb",
+            "args": [ "build-run" ],
+            "arguments": "build-run"
+        },
+        {
+            "name": "Debug Program Windows",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/shaderpaly_debug.exe",
+            "cwd": "${workspaceFolder}",
+            "type": "cppvsdbg",
+            "preLaunchTask": "Build Program Windows"
+        },
+        {
+            "name": "Debug Build Windows",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/build.exe",
+            "cwd": "${workspaceFolder}",
+            "type": "cppvsdbg",
+            // "args": [ "build-run" ],
+            "args": [ "-name=jone" ],
+            "arguments": "build-run"
+        },
+    ]
+}
